@@ -97,9 +97,10 @@
     font-size: 1.15rem;
     letter-spacing: 0.01em;
   }
-  .brand-mark .arch {
-    width: 30px; height: 30px;
+  .brand-mark img {
+    height: 34px; width: auto;
   }
+  footer .brand-mark img { height: 30px; }
   header nav a.cta-small {
     border: 1px solid var(--gold);
     color: var(--gold-bright);
@@ -128,10 +129,10 @@
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(105deg, rgba(23,19,15,0.97) 0%, rgba(23,19,15,0.86) 38%, rgba(23,19,15,0.35) 68%, rgba(23,19,15,0.75) 100%),
-      url('hero-splash.jpg');
+      linear-gradient(105deg, rgba(23,19,15,0.97) 0%, rgba(23,19,15,0.88) 42%, rgba(23,19,15,0.4) 72%, rgba(23,19,15,0.8) 100%),
+      url('hero-oro.jpg');
     background-size: cover;
-    background-position: 68% center;
+    background-position: 72% 30%;
   }
   .hero-bg::after {
     content: "";
@@ -285,7 +286,67 @@
     font-size: 0.95rem;
   }
 
-  /* ---------- Pedido / contacto ---------- */
+  /* ---------- Gift Set ---------- */
+  .giftset {
+    padding: 120px 0;
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .giftset .wrap {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 70px;
+    align-items: center;
+  }
+  .giftset-figure {
+    position: relative;
+  }
+  .giftset-figure::before {
+    content: "";
+    position: absolute;
+    inset: -18px -18px -18px 40px;
+    background: radial-gradient(ellipse at 30% 30%, rgba(215,164,72,0.14), transparent 70%);
+    z-index: 0;
+  }
+  .giftset-figure img {
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 50px 90px -30px rgba(0,0,0,0.75);
+  }
+  .giftset-copy h2 {
+    font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+    margin: 14px 0 20px;
+  }
+  .giftset-copy p {
+    color: var(--cream-dim);
+    font-size: 1.02rem;
+    max-width: 44ch;
+    margin-bottom: 28px;
+  }
+  .giftset-specs {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 34px;
+    flex-wrap: wrap;
+  }
+  .giftset-specs div {
+    border-left: 2px solid var(--gold);
+    padding-left: 14px;
+  }
+  .giftset-specs .num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    color: var(--gold-bright);
+    display: block;
+  }
+  .giftset-specs .label {
+    font-size: 0.78rem;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
   .order {
     padding: 120px 0;
     position: relative;
@@ -367,7 +428,10 @@
     .about .wrap { grid-template-columns: 1fr; gap: 40px; }
     .about-figure { max-width: 340px; margin: 0 auto; }
     .why-grid { grid-template-columns: 1fr; }
-    .hero-bg { background-position: 74% center; }
+    .giftset .wrap { grid-template-columns: 1fr; gap: 40px; }
+    .giftset-figure { max-width: 380px; margin: 0 auto; }
+    .giftset-figure::before { inset: -18px; }
+    .hero-bg { background-position: 78% 20%; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -386,10 +450,7 @@
 <header>
   <div class="wrap">
     <a href="#top" class="brand-mark">
-      <svg class="arch" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 32V16C8 9 13.5 4 20 4C26.5 4 32 9 32 16V32" stroke="#d7a448" stroke-width="2"/>
-        <path d="M14 22C14 22 15 26 20 26C25 26 26 22 26 22" stroke="#d7a448" stroke-width="1.6" stroke-linecap="round"/>
-      </svg>
+      <img src="logo.png" alt="Grano Dorado — Café Gourmet">
       Grano&nbsp;Dorado
     </a>
     <nav>
@@ -399,7 +460,7 @@
 </header>
 
 <section class="hero" id="top">
-  <div class="hero-bg" role="img" aria-label="Taza de café Grano Dorado con granos cayendo y vapor"></div>
+  <div class="hero-bg" role="img" aria-label="Granos de café dorados cayendo en una taza de cobre, arte de Grano Dorado"></div>
   <div class="wrap">
     <div class="hero-inner">
       <span class="eyebrow">Tostado · Molido · Gourmet</span>
@@ -464,6 +525,32 @@
   </div>
 </section>
 
+<section class="giftset">
+  <div class="wrap">
+    <div class="giftset-figure">
+      <img src="gift-set.jpg" alt="Specialty Coffee Gift Set de Grano Dorado, dos bolsas de café en grano entero premium en caja de regalo">
+    </div>
+    <div class="giftset-copy">
+      <span class="eyebrow">Selección especial</span>
+      <h2>El Gift Set, para regalar un buen café.</h2>
+      <p>Dos bolsas de café en grano entero premium, presentadas en una caja de regalo pensada para sorprender. Ideal para compartir Grano Dorado con quien más te importa.</p>
+      <div class="giftset-specs">
+        <div>
+          <span class="num">2 × 12oz</span>
+          <span class="label">Bolsas de grano entero</span>
+        </div>
+        <div>
+          <span class="num">100%</span>
+          <span class="label">Calidad garantizada</span>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="#pedir" class="btn-primary">Disfruta tu café, pídelo aquí</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="order" id="pedir">
   <div class="wrap">
     <span class="eyebrow">Pídelo hoy</span>
@@ -499,9 +586,7 @@
 <footer>
   <div class="wrap">
     <a href="#top" class="brand-mark">
-      <svg class="arch" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 32V16C8 9 13.5 4 20 4C26.5 4 32 9 32 16V32" stroke="#d7a448" stroke-width="2"/>
-      </svg>
+      <img src="logo.png" alt="Grano Dorado — Café Gourmet">
       Grano Dorado
     </a>
     <div class="fine-print">
