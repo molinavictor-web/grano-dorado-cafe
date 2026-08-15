@@ -274,9 +274,20 @@
   }
   .why-card {
     background: var(--ink-soft);
-    padding: 38px 34px;
+    padding: 34px 34px 38px;
   }
-  .why-card svg { margin-bottom: 18px; }
+  .why-card .card-img {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 24px -10px rgba(0,0,0,0.6);
+  }
+  .why-card .card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
   .why-card h3 {
     font-size: 1.15rem;
     margin-bottom: 10px;
@@ -482,7 +493,7 @@
 <section class="about" id="historia">
   <div class="wrap">
     <div class="about-figure">
-      <img src="bolsa-cafe.jpg" alt="Bolsa de Café Grano Dorado, tostado molido gourmet, 100% calidad">
+      <img src="bolsa-cafe.jpg" alt="Bolsas de Café Grano Dorado en exhibición, tostado molido gourmet, bajo el letrero luminoso de la marca">
     </div>
     <div class="about-copy">
       <span class="eyebrow">Sobre el café</span>
@@ -502,22 +513,22 @@
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 8h13a3 3 0 013 3 4 4 0 01-4 4h-1" stroke="#d7a448" stroke-width="1.6" stroke-linecap="round"/><path d="M4 8v7a4 4 0 004 4h4a4 4 0 004-4V8" stroke="#d7a448" stroke-width="1.6"/><path d="M7 3c0 1-1 1-1 2M11 3c0 1-1 1-1 2M15 3c0 1-1 1-1 2" stroke="#d7a448" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div class="card-img"><img src="card-tostado.jpg" alt="Granos de café dorados"></div>
         <h3>Tostado gourmet</h3>
         <p>Un proceso cuidado en cada lote, pensado para resaltar el máximo aroma y sabor del grano.</p>
       </div>
       <div class="why-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3z" stroke="#d7a448" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <div class="card-img"><img src="card-calidad.jpg" alt="Medalla 100% calidad Grano Dorado"></div>
         <h3>100% calidad</h3>
         <p>Seleccionamos el grano pensando en la excelencia, no en el volumen. Sin atajos.</p>
       </div>
       <div class="why-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#d7a448" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="#d7a448" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div class="card-img"><img src="card-momento.jpg" alt="Detalle dorado de la taza Grano Dorado"></div>
         <h3>Para cualquier momento</h3>
         <p>Del primer café de la mañana a la pausa que te mereces en medio del día.</p>
       </div>
       <div class="why-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 20c0-5 3-6 3-10a3 3 0 116 0c0 4 3 5 3 10" stroke="#d7a448" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="card-img"><img src="card-aroma.jpg" alt="Vapor de café Grano Dorado"></div>
         <h3>Aroma que envuelve</h3>
         <p>El primer sorbo se siente antes de probarlo. Así reconoces un Grano Dorado.</p>
       </div>
