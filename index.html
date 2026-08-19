@@ -338,13 +338,15 @@
   }
   .polaroid {
     position: absolute;
+    width: 240px;
     background: var(--cream);
     padding: 10px 10px 30px;
     border-radius: 2px;
     box-shadow: 0 30px 55px -20px rgba(0,0,0,0.75);
   }
   .polaroid img {
-    width: 220px;
+    width: 100%;
+    max-width: none;
     height: 260px;
     object-fit: cover;
     display: block;
@@ -644,7 +646,8 @@
     .why-grid { grid-template-columns: 1fr; }
     .vision-grid { grid-template-columns: 1fr; gap: 56px; }
     .vision-collage { height: 320px; max-width: 320px; margin: 0 auto; }
-    .polaroid img { width: 170px; height: 200px; }
+    .polaroid { width: 190px; }
+    .polaroid img { height: 200px; }
     .moments-grid { grid-template-columns: 1fr; gap: 20px; }
     .moment-card { aspect-ratio: 4 / 3; }
     .gallery-grid { grid-template-columns: 1fr; gap: 50px; max-width: 340px; margin: 0 auto; }
