@@ -426,6 +426,77 @@
     line-height: 1.2;
   }
 
+  /* ---------- Galería (obras inspiradas en Grano Dorado) ---------- */
+  .gallery {
+    padding: 130px 0 140px;
+    background: var(--ink-soft);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .gallery-head {
+    max-width: 620px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+  .gallery-head h2 { font-size: clamp(1.9rem, 3.4vw, 2.5rem); margin: 14px 0 16px; }
+  .gallery-head p { color: var(--cream-dim); font-size: 1.02rem; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 44px;
+  }
+  .frame-card { text-align: center; }
+  .frame-outer {
+    position: relative;
+    padding: 14px;
+    background: linear-gradient(145deg, var(--gold-bright), var(--gold) 40%, #8a6423 100%);
+    border-radius: 3px;
+    box-shadow: 0 35px 60px -24px rgba(0,0,0,0.75);
+  }
+  .frame-inner {
+    padding: 10px;
+    background: var(--ink);
+    border: 1px solid rgba(0,0,0,0.4);
+  }
+  .frame-inner img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+  }
+  .frame-pending {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(45deg, rgba(215,164,72,0.06), rgba(215,164,72,0.06) 10px, transparent 10px, transparent 20px);
+    border: 1px dashed var(--line);
+  }
+  .frame-pending span {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    padding: 0 20px;
+  }
+  .frame-plaque {
+    margin-top: 20px;
+  }
+  .frame-plaque .artist {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--gold-bright);
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .frame-plaque .medium {
+    font-size: 0.8rem;
+    color: var(--cream-dim);
+    letter-spacing: 0.03em;
+  }
+
   /* ---------- Gift Set ---------- */
   .giftset {
     padding: 120px 0;
@@ -576,6 +647,7 @@
     .polaroid img { width: 170px; height: 200px; }
     .moments-grid { grid-template-columns: 1fr; gap: 20px; }
     .moment-card { aspect-ratio: 4 / 3; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 50px; max-width: 340px; margin: 0 auto; }
     .giftset .wrap { grid-template-columns: 1fr; gap: 40px; }
     .giftset-figure { max-width: 380px; margin: 0 auto; }
     .giftset-figure::before { inset: -18px; }
@@ -720,6 +792,51 @@
         <div class="moment-caption">
           <span>En movimiento</span>
           <h3>Tu compañero para cada jornada.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="gallery-head">
+      <span class="eyebrow">Colección artística</span>
+      <h2>Grano Dorado, una obra maestra del café.</h2>
+      <p>Cada gran café merece su propia alegoría. Le pedimos a distintas corrientes del arte que reinterpretaran Grano Dorado a su manera.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="frame-card">
+        <div class="frame-outer">
+          <div class="frame-inner">
+            <img src="galeria-vangogh.png" alt="Logo de Grano Dorado reinterpretado al estilo de La Noche Estrellada">
+          </div>
+        </div>
+        <div class="frame-plaque">
+          <span class="artist">Al estilo de Van Gogh</span>
+          <span class="medium">Inspirado en La Noche Estrellada</span>
+        </div>
+      </div>
+      <div class="frame-card">
+        <div class="frame-outer">
+          <div class="frame-inner">
+            <img src="galeria-picasso.png" alt="Bolsa de Grano Dorado reinterpretada al estilo cubista de Picasso">
+          </div>
+        </div>
+        <div class="frame-plaque">
+          <span class="artist">Al estilo de Picasso</span>
+          <span class="medium">Cubismo</span>
+        </div>
+      </div>
+      <div class="frame-card">
+        <div class="frame-outer">
+          <div class="frame-inner">
+            <img src="galeria-cinetico.jpg" alt="Bolsa de Grano Dorado sobre un mural de módulos cromáticos inspirado en el arte cinético venezolano">
+          </div>
+        </div>
+        <div class="frame-plaque">
+          <span class="artist">Arte cinético venezolano</span>
+          <span class="medium">Módulos cromáticos</span>
         </div>
       </div>
     </div>
